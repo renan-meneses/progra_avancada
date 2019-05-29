@@ -1,19 +1,21 @@
 package questao_4;
 
 
-public class Lembrança {
+public class Lembranca {
 	protected String lugar;
-	protected int deslocamento;
+	protected String deslocamento;
 	Historico historia;
 	
 	
-	public Lembrança() {
+	public Lembranca() {
 		historia = new Historico();
 		lugar = new String();
+		deslocamento = new String();
 	}
-	public void escrever_movimento(String movimentacao) {
-		historia.adicionar_movimento(new Robo(lugar, 0));
+	public void escrever_movimento(String movimentacao, String andar) {
+		historia.adicionar_movimento(new Robo(lugar, deslocamento), null);
 		lugar  += movimentacao;
+		deslocamento += andar;
 	}
 	public void apagar_msg(){
 		lugar = historia.getAtualizacao().getSalvo();
