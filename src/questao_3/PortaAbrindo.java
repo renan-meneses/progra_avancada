@@ -1,4 +1,4 @@
-package questão_3;
+package questao_3;
 
 public class PortaAbrindo implements PortaState {
 

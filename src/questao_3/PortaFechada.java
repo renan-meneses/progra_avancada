@@ -1,6 +1,8 @@
-package questão_3;
+package questao_3;
 
-public class PortaAberta implements PortaState {
+public class PortaFechada implements PortaState {
+	 
+    
 
 	@Override
 	public PortaState abrindo() {
@@ -11,7 +13,7 @@ public class PortaAberta implements PortaState {
 	@Override
 	public PortaState aberta() {
 		System.out.println("Porta esta Aberta");
-		return this;
+		return new PortaAberta();
 	}
 
 	@Override
@@ -23,7 +25,7 @@ public class PortaAberta implements PortaState {
 	@Override
 	public PortaState fechada() {
 		System.out.println("Porta esta fechada");
-		return new PortaFechada();
+		return this;
 	}
-
+ 
 }

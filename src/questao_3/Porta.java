@@ -1,4 +1,4 @@
-package questão_3;
+package questao_3;
 
 public class Porta {
 	    protected PortaState estado;
@@ -19,7 +19,7 @@ public class Porta {
 	        estado = estado.fechado();
 	    }
 	 
-	    public void levarDano() {
+	    public void fechada() {
 	        estado = estado.fechada();
 	    }
 	}
